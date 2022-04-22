@@ -15,6 +15,7 @@ const transporter = nodemailer.createTransport({
 });
 
 router.post('/send', (req, res) => {
+    console.log("entered")
     const mailData = {
         from: 'maileranvtangertevekutyun@gmail.com',
         to: 'anvtang.ertevekutyun@mail.ru',
@@ -23,10 +24,13 @@ router.post('/send', (req, res) => {
             '<br>Ամսաթիվ: ' + req.body.date,
     };
 
+    console.log(mailData.json())
+
     transporter.sendMail(mailData, (error, info) => {
         if (error) {
             return console.log(error);
         }
+        console.log(info)
         res.status(200).send({ message: "Mail send", message_id: info.messageId });
     });
 });
