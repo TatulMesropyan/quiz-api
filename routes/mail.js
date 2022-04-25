@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 router.post('/send', (req, res) => {
     console.log("entered")
     const mailData = {
-        from: 'maileranvtangertevekutyun@gmail.com',
+        from: 'armenrub1991@mail.ru',
         to: 'anvtang.ertevekutyun@mail.ru',
         subject: 'Թեստի արդյունքներ - ' + req.body.name,
         html: '<h4>Թեստի արդյունքներ </h4><br>Անուն: ' + req.body.name + '<br/>Ճիշտ պատասխանների քանակ: ' + req.body.correctAnswers +
