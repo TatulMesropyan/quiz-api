@@ -6,7 +6,7 @@ const {getSecret} = require('../secrets')
 
 const transporter = nodemailer.createTransport({
     port: 465,
-    host: "smtp.gmail.com",
+    host: "smtp.mail.ru",
     auth: {
         user: getSecret('mail'),
         pass: getSecret('mailPass'),
