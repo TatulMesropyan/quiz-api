@@ -102,7 +102,7 @@ router.post('/login', async (req, res) => {
         csrfToken: session.csrfToken,
         token: session.token,
         status: 'success',
-        redirectUrl: 'https://www.anvtang.am/test'
+        redirectUrl: 'https://www.testanvtang.am/test'
       });
   } catch (err) {
     res.status(401).json({
